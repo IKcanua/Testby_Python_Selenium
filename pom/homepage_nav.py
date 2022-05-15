@@ -2,6 +2,7 @@ from base.seleniumbase import SeleniumBase
 from selenium.webdriver.remote.webelement import WebElement
 from typing import List
 
+
 from base.utils import Utils
 
 
