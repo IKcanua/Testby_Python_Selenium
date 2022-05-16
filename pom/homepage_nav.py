@@ -11,11 +11,14 @@ class HomepageNav(SeleniumBase):
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
-        self.close_link: str = '#closeButton'
+        #self.close_link: str = '#closeButton'
+        #self.__nav_links: str = '#navbar-collapse > li'
         self.__nav_links: str = '#mainNavigationFobs>li'
         self.NAV_LINK_TEXT = 'Women,Men,Kids & Baby,Home,Shoes,Handbags & Accessories,Jewelry,Sale'
+        # self.NAV_LINK_TEXT = 'programs,about,admission,Home,Shoes,Handbags & Accessories,Jewelry,Sale'
 
     def get_nav_links(self) -> List[WebElement]:
+        # return self.are_visible('xpath', self.__nav_links, 'Header Navigation Links')
         return self.are_visible('css', self.__nav_links, 'Header Navigation Links')
 
     def get_nav_links_text(self) -> str:
